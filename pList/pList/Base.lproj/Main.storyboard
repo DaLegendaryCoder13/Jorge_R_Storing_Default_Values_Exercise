@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Fox.png" translatesAutoresizingMaskIntoConstraints="NO" id="wzB-XT-oR8">
+                                <rect key="frame" x="9" y="120" width="414" height="412"/>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O6I-t1-eDB">
+                                <rect key="frame" x="171" y="665" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="MySwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="Uln-LF-JuK"/>
+                                    <action selector="mySwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="f9D-dR-oIc"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rd3-Hd-OMY">
+                                <rect key="frame" x="184" y="90" width="34" height="30"/>
+                                <state key="normal" title="Load"/>
+                                <connections>
+                                    <action selector="myLoadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pqK-bX-MNr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qd0-t2-c9I">
+                                <rect key="frame" x="291" y="90" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="myDeleteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Em6-xt-zsU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCR-XR-hSd">
+                                <rect key="frame" x="75" y="90" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="mySaveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hgv-kY-Nev"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KsB-1b-bZy">
+                                <rect key="frame" x="142" y="601" width="118" height="30"/>
+                            </slider>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="567-lO-2Ba">
+                                <rect key="frame" x="39" y="540" width="336" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="MySerialNumber:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="LR3-L9-omr"/>
+                                    <action selector="mySerialNumber:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="YJQ-9S-rkc"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="wzB-XT-oR8" firstAttribute="top" secondItem="rd3-Hd-OMY" secondAttribute="bottom" id="CF8-zm-cfR"/>
+                            <constraint firstItem="wzB-XT-oR8" firstAttribute="top" secondItem="rd3-Hd-OMY" secondAttribute="bottom" constant="8" symbolic="YES" id="JcN-2c-RuT"/>
+                            <constraint firstItem="wzB-XT-oR8" firstAttribute="top" secondItem="rd3-Hd-OMY" secondAttribute="bottom" id="Lc6-cx-Ty2"/>
+                            <constraint firstItem="wzB-XT-oR8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="brg-qC-Sll"/>
+                            <constraint firstItem="wzB-XT-oR8" firstAttribute="top" secondItem="rd3-Hd-OMY" secondAttribute="bottom" id="dNQ-aG-1tt"/>
+                            <constraint firstItem="wzB-XT-oR8" firstAttribute="top" secondItem="rd3-Hd-OMY" secondAttribute="bottom" id="e7h-0O-f9D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wzB-XT-oR8" secondAttribute="trailing" id="hDf-FP-XnN"/>
+                            <constraint firstItem="wzB-XT-oR8" firstAttribute="top" secondItem="rd3-Hd-OMY" secondAttribute="bottom" id="swR-ym-bmo"/>
+                            <constraint firstItem="KsB-1b-bZy" firstAttribute="top" secondItem="wzB-XT-oR8" secondAttribute="bottom" id="tWg-my-Jtc"/>
+                            <constraint firstItem="567-lO-2Ba" firstAttribute="top" secondItem="wzB-XT-oR8" secondAttribute="bottom" id="wxc-70-JFT"/>
+                            <constraint firstItem="567-lO-2Ba" firstAttribute="top" secondItem="wzB-XT-oR8" secondAttribute="bottom" id="zhS-8X-TOv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mySerialNumber" destination="567-lO-2Ba" id="fny-fa-vWv"/>
+                        <outlet property="mySlider" destination="KsB-1b-bZy" id="tWv-yE-jef"/>
+                        <outlet property="mySwitch" destination="O6I-t1-eDB" id="1O6-O3-SpR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Fox.png" width="512" height="486"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
